@@ -1,0 +1,91 @@
+Source: wifi-switcher
+Section: user/desktop
+Priority: extra
+Maintainer: Tito Ragusa <farmatito@tiscali.it>
+Standards-Version: 3.8.3
+Build-Depends: debhelper (>= 4.0.0), libgtk2.0-dev, libosso-dev (>= 1), hildon-desktop, libhildondesktop1-dev (>= 2.0.18), hildon-control-panel-dev
+
+Package: wifi-switcher
+Version: 0.0.10
+Section: user/desktop
+Priority: extra
+Architecture: armel
+Depends: libhildonfm2 (>= 1:2.0.5), libhildon1 (>= 2.1.70-1+0m5), libhildondesktop1 (>= 2.1.21+0m5), hildon-desktop , sudo
+Description: Wifi on/off switcher statusbar plugin.
+ The Wifi on/off switcher is a statusbar plugin that allows to
+ turn off the wifi radio by kernel module unloading to reduce
+ power consumption and thus improves greatly your battery life.
+XSBC-Bugtracker: mailto:farmatito@tiscali.it
+XB-Maemo-Display-Name: Wifi Switcher
+XB-Maemo-Icon-26: 
+ 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
+ LpV3WdN51/z/Si0KC0w3ipMAAAAASUVORK5CYII=
+

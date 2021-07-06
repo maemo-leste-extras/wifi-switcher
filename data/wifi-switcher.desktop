@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Wifi Switcher
+Comment=Wifi Switcher
+Icon=kwifimanager_big.png
+Type=default
+X-Path=libwifi_switcher.so

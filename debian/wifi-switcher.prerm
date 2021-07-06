@@ -1,0 +1,5 @@
+#! /bin/sh
+
+
+#Remove the desktop entry
+exit 0

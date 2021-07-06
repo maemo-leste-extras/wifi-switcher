@@ -1,0 +1,67 @@
+wifi-switcher (0.0.10) unstable; urgency=low
+
+  * Show current wireless LAN status in N900 status menu
+
+ --  Thomas Jarosch <tomj@simonv.com>  Wed, 29 Jun 2011 09:50:09 +0200
+
+wifi-switcher (0.0.9) unstable; urgency=low
+
+  * Fixed bugtracker entry in control file once again.
+
+ --  Tito Ragusa <farmatito@tiscali.it>  Fri, 26 Feb 2010 22:25:00 +0100
+
+wifi-switcher (0.0.8) unstable; urgency=low
+
+  * Fixed bugtracker entry in control file.
+
+ --  Tito Ragusa <farmatito@tiscali.it>  Fri, 26 Feb 2010 22:05:01 +0100
+
+wifi-switcher (0.0.7) unstable; urgency=low
+
+  * Added bugtracker to control file.
+
+ -- Tito Ragusa <farmatito@tiscali.it>  Fri, 26 Feb 2010 21:52:12 +0100
+
+wifi-switcher (0.0.6) unstable; urgency=low
+
+  * Set ip address to 0.0.0.0 to please ip monitoring
+    apps when disabling wlan.
+  * Properly stop and start wlancond.
+  * Fix .desktop file.
+  * More wifi.sh script clean ups.
+  * Code clean up.
+
+ -- Tito Ragusa <farmatito@tiscali.it>  Sat, 30 Jan 2010 14:47:35 +0100
+
+wifi-switcher (0.0.5) unstable; urgency=low
+
+  * More wifi.sh script clean ups
+
+ -- Tito Ragusa <farmatito@tiscali.it>  Mon, 25 Jan 2010 23:45:19 +0100
+
+wifi-switcher (0.0.4) unstable; urgency=low
+
+  * Fix wifi.sh helper script to peruse upstart to respawn 
+    wlancond.
+  * Fix wifi.sh helper script to up and down wlan0 correctly
+    to run hooks in /etc/network/if*.d/ if any.
+
+ -- Tito Ragusa <farmatito@tiscali.it>  Fri, 15 Jan 2010 23:32:00 +0100
+
+wifi-switcher (0.0.3) unstable; urgency=low
+
+  * Added tray icon when wlan is off
+
+ -- Tito Ragusa <farmatito@tiscali.it>  Fri, 15 Jan 2010 00:12:30 +0100
+
+wifi-switcher (0.0.2) unstable; urgency=low
+
+  * Improved.
+
+ -- Tito Ragusa <farmatito@tiscali.it>  Fri, 25 Dec 2009 00:12:30 +0100
+
+wifi-switcher (0.0.1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Tito Ragusa <farmatito@tiscali.it>  Sat, 19 Dec 2009 00:12:30 +0100
