@@ -22,14 +22,22 @@
 # Report bugs to <farmatito@tiscali.it>
 #
 
-EXTRA_DIST= config.rpath m4/ChangeLog  \
-    autogen.sh \
-    debian/rules \
-    debian/control \
-    debian/copyright \
-    debian/changelog \
-    debian/wifi-switcher.install
+EXTRA_DIST = \
+	debian/changelog \
+	debian/compat \
+	debian/control \
+	debian/copyright \
+	debian/README.debian \
+	debian/rules \
+	debian/wifi-switcher.postinst
 
-SUBDIRS = po src data
+EXTRA_DIST += \
+	data/kwifimanager_big.png \
+	data/Makefile.am \
+	data/wifi-switcher.desktop \
+	data/wifi-switcher.sudoers \
+	data/wlan_off.png
+
+SUBDIRS = src data
 
 ACLOCAL_AMFLAGS = -I m4

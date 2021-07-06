@@ -23,14 +23,13 @@
 #
 
 
-AC_INIT(Makefile.am)
-AM_INIT_AUTOMAKE(wifi-switcher, 0.0.10)
+AC_INIT([wifi-switcher], [0.0.11])
+AM_INIT_AUTOMAKE([foreign])
 AM_CONFIG_HEADER(config.h)
-AM_GNU_GETTEXT([external])
+AC_CONFIG_MACRO_DIRS([m4])
 AC_PROG_CPP
 AC_PROG_INSTALL
 AC_PROG_LIBTOOL
-AC_LIB_RPATH
 
 # Some CFLAGS comes from debian/rules
 CFLAGS="$CFLAGS -Wall -pedantic -Wmissing-prototypes -Wmissing-declarations -std=gnu99"
@@ -59,7 +58,7 @@ PKG_CHECK_MODULES(DBUS, dbus-glib-1 >= 0.60)
 AC_SUBST(DBUS_LIBS)
 AC_SUBST(DBUS_CFLAGS)
 
-AC_OUTPUT( po/Makefile.in
+AC_OUTPUT(
         Makefile \
         data/Makefile \
         src/Makefile

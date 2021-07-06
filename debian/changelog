@@ -1,3 +1,9 @@
+wifi-switcher (0.0.11) unstable; urgency=low
+
+  * Port package to Maemo Leste
+
+ --  Benjamin Cohen <bencoh@notk.org>  Sun, 04 Jul 2021 00:26:04 +0300
+
 wifi-switcher (0.0.10) unstable; urgency=low
 
   * Show current wireless LAN status in N900 status menu

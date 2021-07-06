@@ -11,5 +11,4 @@ gtk-update-icon-cache -f /usr/share/icons/hicolor
 # maemo-select-menu-location will trigger the reconstructing of the 
 # Task navigator menu as well.
 
-update-sudoers
 exit 0

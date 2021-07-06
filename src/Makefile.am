@@ -34,7 +34,8 @@ libwifi_switcher_la_CFLAGS = $(GLIB_CFLAGS) $(GTK_CFLAGS) \
 libwifi_switcher_la_LIBADD = $(GLIB_LIBS) $(GTK_LIBS) \
 				   $(HILDON_LIBS)
 libwifi_switcher_la_LDFLAGS = -module -avoid-version
-libwifi_switcher_la_SOURCES = wifi-switcher-statusbar.c
+libwifi_switcher_la_SOURCES = wifi-switcher-statusbar.c \
+	wifi-switcher-statusbar.h
 
 
 CLEAN_FILES = $(BUILT_SOURCES)

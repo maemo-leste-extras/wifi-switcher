@@ -1,21 +1,19 @@
 Source: wifi-switcher
 Section: user/desktop
 Priority: extra
-Maintainer: Tito Ragusa <farmatito@tiscali.it>
+Maintainer: Benjamin Cohen <bencoh@notk.org>
 Standards-Version: 3.8.3
-Build-Depends: debhelper (>= 4.0.0), libgtk2.0-dev, libosso-dev (>= 1), hildon-desktop, libhildondesktop1-dev (>= 2.0.18), hildon-control-panel-dev
+Build-Depends: debhelper (>= 12.0.0), libgtk2.0-dev, libosso-dev (>= 1), libhildondesktop1-dev (>= 2.0.18)
 
 Package: wifi-switcher
-Version: 0.0.10
 Section: user/desktop
 Priority: extra
-Architecture: armel
-Depends: libhildonfm2 (>= 1:2.0.5), libhildon1 (>= 2.1.70-1+0m5), libhildondesktop1 (>= 2.1.21+0m5), hildon-desktop , sudo
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, sudo, net-tools
 Description: Wifi on/off switcher statusbar plugin.
  The Wifi on/off switcher is a statusbar plugin that allows to
  turn off the wifi radio by kernel module unloading to reduce
  power consumption and thus improves greatly your battery life.
-XSBC-Bugtracker: mailto:farmatito@tiscali.it
 XB-Maemo-Display-Name: Wifi Switcher
 XB-Maemo-Icon-26: 
  iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/
