@@ -1,8 +1,9 @@
 /*
 *
 * Wifi switcher for N900  Copyright (C) 2010 by Tito Ragusa <farmatito@tiscali.it>
+* Modified for Maemo Leste  Copyright (C) 2021 Benjamin Cohen <bencoh@notk.org>
 *
-* Wifi switicher is a tool to tenable/disable wifi on the Nokia N900
+* Wifi switcher / status applet for Maemo Leste
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public License as
@@ -20,14 +21,14 @@
 *
 * Please read the COPYING and README file!!!
 *
-* Report bugs to <farmatito@tiscali.it>
-*
 */
 #define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <sys/types.h>
+#include <sys/types.h>
+#include <fcntl.h>
 #include <sys/wait.h>
 #include <gtk/gtk.h>
 #include <hildon/hildon.h>
@@ -55,6 +56,7 @@ static void wifi_switcher_class_init (WifiSwitcherClass *klass)
 	g_type_class_add_private (klass, sizeof (WifiSwitcherPrivate));
 }
 
+#if 0 /* properly written driver should not need to be unloaded */
 /** Check if wifi module is loaded
     @return One if wifi module is loaded, zero otherwise
 */
@@ -77,13 +79,33 @@ static int check_wifi_module_loaded()
 	}
 	return module_loaded;
 }
+#else
+/** Check if wlan interface is up
+	@return One if wlan interface is up, zero otherwise
+*/
+static int check_wifi_up()
+{
+	int wifi_up = 0;
+	char str[16];
+	int fd = open("/sys/class/net/wlan0/flags", O_RDONLY);
+	if (fd) {
+		if (read(fd, &str, sizeof(str))) {
+			/* check UP bit (0x0001) */
+			wifi_up = !!(strtoul(str, NULL, 16) & 0x1);
+		}
+		close(fd);
+	}
 
-/** Set Wifi button text according to wifi module state
+	return wifi_up;
+}
+#endif
+
+/** Set Wifi button text according to wlan interface state
 	@param priv Pointer to WifiSwitcherPrivate structure
 */
 static void set_wifi_button_text(WifiSwitcherPrivate *priv)
 {
-	const char *subtext = check_wifi_module_loaded() ? "On" : "Off";
+	const char *subtext = check_wifi_up() ? "On" : "Off";
 	hildon_button_set_text (HILDON_BUTTON (priv->button),
 				"Wireless LAN",
 				subtext);
