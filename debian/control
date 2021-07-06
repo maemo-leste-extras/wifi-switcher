@@ -1,13 +1,13 @@
 Source: wifi-switcher
 Section: user/desktop
-Priority: extra
+Priority: optional
 Maintainer: Benjamin Cohen <bencoh@notk.org>
 Standards-Version: 3.8.3
 Build-Depends: debhelper (>= 12.0.0), libgtk2.0-dev, libosso-dev (>= 1), libhildondesktop1-dev (>= 2.0.18)
 
 Package: wifi-switcher
 Section: user/desktop
-Priority: extra
+Priority: optional
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, sudo, net-tools
 Description: Wifi on/off switcher statusbar plugin.
