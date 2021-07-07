@@ -1,3 +1,12 @@
+wifi-switcher (0.0.12) unstable; urgency=low
+
+  * Use %users group in sudoers.d file
+  * turn wlan0 down instead of unloading driver
+  * disable static lib, remove *.la
+  * change priority to optional
+
+ --  Benjamin Cohen <bencoh@notk.org>  Wed, 07 Jul 2021 12:17:43 +0300
+
 wifi-switcher (0.0.11) unstable; urgency=low
 
   * Port package to Maemo Leste

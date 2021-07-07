@@ -23,7 +23,7 @@
 #
 
 
-AC_INIT([wifi-switcher], [0.0.11])
+AC_INIT([wifi-switcher], [0.0.12])
 AM_INIT_AUTOMAKE([foreign])
 AM_CONFIG_HEADER(config.h)
 AC_CONFIG_MACRO_DIRS([m4])
